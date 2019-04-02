@@ -200,9 +200,10 @@ func checkNumber(input string) (raw string, err error) {
 	if len(input) == 0 {
 		return "", ErrEmptyNumber
 	}
-	if len(input) > 1 && input[0] == '0' {
-		return "", ErrLeadingZero
-	}
+	// no checking leading zero.
+	// if len(input) > 1 && input[0] == '0' {
+	// 	return "", ErrLeadingZero
+	// }
 	return input, nil
 }
 
